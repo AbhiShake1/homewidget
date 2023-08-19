@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.app.homewidget'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.app.homewidget"
         minSdk 31
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -37,7 +37,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0-beta01'
+        kotlinCompilerExtensionVersion compose_version
     }
     packagingOptions {
         resources {
@@ -61,12 +61,8 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
+    implementation "androidx.glance:glance:1.0.0-alpha05"
+
     // For AppWidgets support
-    implementation "androidx.glance:glance-appwidget:1.0.0-rc01"
-
-    // For interop APIs with Material 2
-    implementation "androidx.glance:glance-material:1.0.0-rc01"
-
-    // For interop APIs with Material 3
-    implementation "androidx.glance:glance-material3:1.0.0-rc01"
+    implementation "androidx.glance:glance-appwidget:1.0.0-alpha05"
 }
