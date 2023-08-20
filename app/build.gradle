@@ -65,4 +65,6 @@ dependencies {
 
     // For AppWidgets support
     implementation "androidx.glance:glance-appwidget:1.0.0-alpha05"
+
+    implementation("io.coil-kt:coil-compose:2.0.0")
 }

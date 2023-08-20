@@ -1,7 +1,6 @@
 package com.app.homewidget.widgets
 
 import android.content.Context
-import android.provider.SyncStateContract.Helpers.update
 import androidx.compose.runtime.Composable
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.glance.Button
@@ -17,6 +16,7 @@ import androidx.glance.layout.Alignment
 import androidx.glance.layout.Column
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.text.Text
+import coil.compose.AsyncImage
 
 object CounterWidget : GlanceAppWidget() {
     val key = intPreferencesKey("count_key")
@@ -31,6 +31,10 @@ object CounterWidget : GlanceAppWidget() {
         ) {
             Text(text = "Current count: $count")
             Button(text = "+", onClick = actionRunCallback<IncrementAction>())
+            AsyncImage(
+                model = "https://play-lh.googleusercontent.com/Xh_OlrdkF1UnGCnMN__4z-yXffBAEl0eUDeVDPr4UthOERV4Fll9S-TozSfnlXDFzw",
+                contentDescription = "Logo"
+            )
         }
     }
 }
